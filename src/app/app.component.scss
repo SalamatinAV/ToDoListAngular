@@ -1,0 +1,46 @@
+.conteiner {
+  margin: 0 auto;
+  width: 1065px;
+  height: 100vh;
+  background-color: rgba(190, 190, 189, 0.856);
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 5px;
+
+  .add-todo {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .list {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 102px);
+    .todo-list {
+      width: 50%;
+      margin: 2px;
+      box-sizing: border-box;
+      border: 2px solid black;
+      border-radius: 5px;
+      background-image: url(../assets/img/лист.webp);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+    .done-list {
+      width: 50%;
+      margin: 2px;
+      box-sizing: border-box;
+      border: 2px solid black;
+      border-radius: 5px;
+      // background: url(https://tozpat.ru/wp-content/uploads/2021/06/listok-v-kletku-a4-raspechatat.png);
+      background-image: url(../assets/img/лист.webp);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+  }
+}

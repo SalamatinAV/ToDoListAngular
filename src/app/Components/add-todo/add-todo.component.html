@@ -1,0 +1,21 @@
+<div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>введите текст</mat-label>
+      <input
+        matInput
+        placeholder="написать задачу"
+        [(ngModel)]="title"
+        name="first"
+      />
+    </mat-form-field>
+  </form>
+  <button
+    class="btn"
+    mat-stroked-button
+    (click)="addTask()"
+    [disabled]="title === ''"
+  >
+    Добавить
+  </button>
+</div>

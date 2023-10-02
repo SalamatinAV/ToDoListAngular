@@ -1,0 +1,23 @@
+<div class="list">
+  <h1>Список выполненых задач!</h1>
+</div>
+
+<div class="content">
+  <div class="list">
+    <h2 *ngIf="doneTasks.length === 0">Список Пуст</h2>
+  </div>
+
+  <div class="todo-conteiner" *ngFor="let todo of doneTasks">
+    <div class="todo-list">
+      <span>{{ todo.title }} </span>
+      <div [ngStyle]="{ display: 'flex', alignItems: 'center' }">
+        <span [ngStyle]="{ marginRight: '3px' }">{{
+          todo.endDate | date : "dd.LL.YY  HH.mm.ss"
+        }}</span>
+        <mat-icon (click)="delet(todo.id)">
+          <span class="material-symbols-outlined"> delete_forever </span>
+        </mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="list">
+  <h1>Список задач!</h1>
+</div>
+
+<div class="content">
+  <div class="list">
+    <h2 *ngIf="newTasks.length === 0">Список Пуст</h2>
+  </div>
+  <div class="todo-conteiner" *ngFor="let todo of newTasks">
+    <div class="todo-list">
+      <span>{{ todo.title }} </span>
+      <div [ngStyle]="{ display: 'flex', alignItems: 'center' }">
+        <span [ngStyle]="{ marginRight: '3px' }"
+          >{{ todo.startDate | date : "dd.LL.YY  HH.mm.ss" }}
+        </span>
+        <mat-icon (click)="done(todo.id)">
+          <span class="material-symbols-outlined"> task_alt </span>
+        </mat-icon>
+      </div>
+    </div>
+  </div>
+</div>
